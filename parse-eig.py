@@ -17,7 +17,7 @@ with open('bd.dat') as f:
     npl = 10
     dividend = nbnd
     divisor = npl
-    div = nbnd // npl + 2
+    div = nbnd // npl + 1 if nbnd % npl == 0 else nbnd // npl + 2
 
     for index, value in enumerate(lines[1:]):
         value = value.strip(' \n')
